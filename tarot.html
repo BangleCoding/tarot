@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="tarot_home">
+	<table border="1" id="spread_home">
+		<thead></thead>
+		<tbody></tbody>
+		<tr>
+			<td colspan ="3">
+				<span>testing tarot</span>
+			</td>
+		</tr>
+		<tr>
+			<td colspan ="3">
+				<span>Please select a spread you want.</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" value="one card" id="1">
+			</td>
+			<td>
+				<input type="button" value="two card" id="2">
+			</td>
+			<td>
+				<input type="button" value="three card" id="3">
+			</td>
+		</tr>
+	</table>
+</div>
+
+<script type="text/javascript">
+	
+	var dataset;
+	var targetSpread = ""; 
+	var ArrayCard = []; 
+
+	var spreadVal = document.addEventListener('click',function(e){
+		ArrayCard = [];
+		targetSpread = e.target.id; 
+		makeNumber(targetSpread);
+		console.log(ArrayCard);
+	})
+	
+	var ArrayCard = []; 
+		
+	function makeNumber(targetSpread){
+		var i = targetSpread; 
+		console.log(targetSpread); 
+		var array = new Array(78);
+		for(i=1; i<=targetSpread; i++){
+			ArrayCard.push(i);
+// 				array.sort(function(a,b){
+// 					var randomInt= .5 - Math.random(); 
+// 				});
+		}
+	}
+		
+		
+		dataset = [
+			{
+				"card": 1, 
+			},
+			{
+				"card": 2, 
+			},
+			{
+				"card": 3, 
+			},
+			{
+				"card": 4, 
+			},
+			{
+				"card": 5, 
+			},
+			{
+				"card": 6, 
+			},
+			{
+				"card": 7, 
+			},
+			{
+				"card": 8, 
+			},
+			{
+				"card": 9, 
+			},
+			{
+				"card": 10, 
+			},
+			{
+				"card": 11, 
+			},
+		];
+		
+
+</script>
+</body>
+</html>
+
